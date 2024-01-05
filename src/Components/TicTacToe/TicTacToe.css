@@ -49,3 +49,11 @@
     padding: 20px;
     height: 50px;
 }
+
+/* ---------------- MEDIA QUERIES (SMALL DEVICES) ---------------- */
+
+@media screen and (max-width: 600px) {
+    body {
+        width: 600px;
+    }
+}
