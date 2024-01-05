@@ -26,7 +26,7 @@ const TicTacToe = () => {
         if (lock) {
             return 0;
         }
-        if (count % 2 === 0) {
+        if (count % 2 === 0 && data[num] === "") {
             e.target.innerHTML = `<img src='${cross_icon}'>`;
             data[num] = "x";
             setCount(++count);
@@ -88,7 +88,7 @@ const TicTacToe = () => {
     const reset = () => {
         setLock(false);
         data = ["", "", "", "", "", "", "", "", ""];
-        titleRef.current.innerHTML = " Tic Tac Toe Game In <span>React</span>";
+        titleRef.current.innerHTML = " Tic Tac Toe Game";
         box_array.map((e)=>{
             return e.current.innerHTML = "";
         })
@@ -96,7 +96,7 @@ const TicTacToe = () => {
 
     return (
         <div className='container'>
-            <h1 className="title" ref={titleRef}>Tic Tac Toe Game In <span>React</span></h1>
+            <h1 className="title" ref={titleRef}>Tic Tac Toe Game</h1>
             <div className="board">
                 <div className="row1">
                     <div className="boxes" ref={box1} onClick={(e) => { toggle(e, 0) }}></div>
